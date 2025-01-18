@@ -2,6 +2,10 @@ package com.hxy.chatgptdatadomain.openai.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.hxy.chatgptdatadomain.openai.model.aggregates.ChatProcessAggregate;
+import com.hxy.chatgptdatadomain.openai.model.entity.RuleLogicEntity;
+import com.hxy.chatgptdatadomain.openai.model.entity.UserAccountQuotaEntity;
+import com.hxy.chatgptdatadomain.openai.service.rule.factory.DefaultLogicFactory;
+import com.hxy.chatgptdatadomain.repository.IOpenAiRepository;
 import com.hxy.chatgptdatatypes.common.Constants;
 import com.hxy.chatgptdatatypes.exception.ChatGPTException;
 import com.hxy.chatgptsdkjavalearning.session.OpenAiSession;
@@ -16,6 +20,9 @@ public abstract class AbstractChatService implements IChatService{
     @Resource
     protected OpenAiSession openAiSession;
 
+    @Resource
+    IOpenAiRepository openAiRepository;
+
     @Override
     public ResponseBodyEmitter completions(ResponseBodyEmitter emitter, ChatProcessAggregate chatProcess) {
         try{
@@ -27,8 +34,18 @@ public abstract class AbstractChatService implements IChatService{
             emitter.onError(throwable -> {
                 log.error("流式问答请求疫情，使用模型：{}", chatProcess.getModel(), throwable);
             });
-            // TODO: 2025/1/12 2.账户获取
-            // TODO: 2025/1/12 3.规则过滤
+            // 账户获取
+            UserAccountQuotaEntity userAccountQuotaEntity = openAiRepository.queryUserAccount(chatProcess.getOpenid());
+
+            log.info("userAccountQuotaEntity == null ? {}", userAccountQuotaEntity == null);
+
+            // 规则过滤
+            RuleLogicEntity<ChatProcessAggregate> ruleLogicEntity = this.doCheckLogic(chatProcess, userAccountQuotaEntity,
+//                    DefaultLogicFactory.LogicModel.ACCESS_LIMIT.getCode(),
+//                    DefaultLogicFactory.LogicModel.SENSITIVE_WORD.getCode(),
+                    null != userAccountQuotaEntity ? DefaultLogicFactory.LogicModel.ACCOUNT_STATUS.getCode() : DefaultLogicFactory.LogicModel.NULL.getCode(),
+//                    null != userAccountQuotaEntity ? DefaultLogicFactory.LogicModel.MODEL_TYPE.getCode() : DefaultLogicFactory.LogicModel.NULL.getCode(),
+                    null != userAccountQuotaEntity ? DefaultLogicFactory.LogicModel.USER_QUOTA.getCode() : DefaultLogicFactory.LogicModel.NULL.getCode());
             // 4. 应答处理【chatGPT、chatGLM策略模式】
             this.doMessageResponse(chatProcess, emitter);
         }catch (Exception e){
@@ -38,4 +55,6 @@ public abstract class AbstractChatService implements IChatService{
         return emitter;
     }
     protected abstract void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException;
+
+    protected abstract RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, UserAccountQuotaEntity userAccountQuotaEntity, String ...logics) throws Exception;
 }

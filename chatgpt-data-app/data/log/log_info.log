@@ -1,0 +1,231 @@
+25-01-18.09:13:10.037 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:13:10.043 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:13:18.705 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22992 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:13:18.705 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:13:22.006 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:13:22.245 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 4.11 seconds (JVM running for 8.854)
+25-01-18.09:13:22.468 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:13:22.727 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:13:22.763 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:13:22.763 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:13:22.812 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-18.09:13:22.812 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-18.09:13:22.813 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-18.09:13:22.813 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-18.09:13:22.813 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:13:22.813 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-18.09:13:22.813 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (2835ms)
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Sat, 18 Jan 2025 01:13:25 GMT
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 2025011809132516166310439988971
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 097b5de2aef2f90d989b3bd165cf771a.cloudfront.net (CloudFront)
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: LAX50-P1
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: _zlVaxwXGtZwSjnWvrqWEUEjLV5jIq1-KD8dzvvkYHwf223jeg1ckA==
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-18.09:13:25.649 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-18.09:13:25.650 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-18.09:13:25.650 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-18.09:13:25.650 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-18.09:13:25.650 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-18.09:13:25.656 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:13:25.656 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-AqrgrchUYIkgFZ1TYpPp2lTkQkPTD","object":"chat.completion.chunk","created":1737162805,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrgrchUYIkgFZ1TYpPp2lTkQkPTD","object":"chat.completion.chunk","created":1737162805,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrgrchUYIkgFZ1TYpPp2lTkQkPTD","object":"chat.completion.chunk","created":1737162805,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"usage":null}
+
+data: [DONE]
+
+
+25-01-18.09:13:25.656 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (840-byte body)
+25-01-18.09:15:11.432 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:15:11.438 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:15:14.051 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22236 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:15:14.052 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:15:15.999 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:15:16.214 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.509 seconds (JVM running for 3.204)
+25-01-18.09:15:16.400 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:15:16.619 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:15:16.654 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:15:16.654 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-18.09:15:16.703 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (4962ms)
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Sat, 18 Jan 2025 01:15:21 GMT
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 2025011809151937975871732980037
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 eff294f75dc5e54c1eeab4c7f8b45886.cloudfront.net (CloudFront)
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: LAX50-P1
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: HRT65uO-z85CoK4kGPSgv5Rk6fcU-POVtRwNBWnDNhnBY54ooSU3cg==
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-18.09:15:21.666 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-18.09:15:21.667 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-18.09:15:21.667 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-18.09:15:21.667 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-18.09:15:21.955 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:15:21.955 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"1"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"+"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"1"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":" equals"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":" "},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"."},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqrijiMGIdYpqKCmQtmXWJiLwneYc","object":"chat.completion.chunk","created":1737162921,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"usage":null}
+
+data: [DONE]
+
+
+25-01-18.09:15:21.955 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (2484-byte body)
+25-01-18.09:22:48.214 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:22:48.221 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:22:51.091 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 24320 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:22:51.092 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:22:53.264 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:22:53.563 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.839 seconds (JVM running for 3.714)
+25-01-18.09:23:13.167 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:23:14.331 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:24:00.383 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:24:00.384 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s946ms426µs500ns).
+25-01-18.09:24:00.385 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:24:00.457 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-18.09:24:00.457 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-18.09:24:00.457 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-18.09:24:00.458 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-18.09:24:00.458 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:24:00.458 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-18.09:24:00.458 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-18.09:24:00.522 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:24:00.530 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:24:03.618 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22772 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:24:03.619 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:24:05.802 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:24:06.082 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.87 seconds (JVM running for 4.229)
+25-01-18.09:24:13.723 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:24:14.850 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:24:47.422 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:24:47.435 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-18.09:24:47.501 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-18.09:24:47.555 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:24:47.562 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:24:50.198 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 20136 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:24:50.199 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:24:52.377 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:24:52.672 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.848 seconds (JVM running for 3.659)
+25-01-18.09:24:56.455 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:24:56.720 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:24:56.763 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:24:56.763 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:24:56.874 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:24:56.888 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:25:05.702 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 23132 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:25:05.703 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:25:07.641 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:25:07.856 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.514 seconds (JVM running for 3.169)
+25-01-18.09:25:08.030 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.09:25:08.240 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.09:25:08.274 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.09:25:08.274 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.09:25:08.333 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.09:25:08.335 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.09:50:22.223 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 17008 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.09:50:22.224 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.09:50:24.469 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.09:50:24.766 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.935 seconds (JVM running for 3.729)
+25-01-18.10:01:36.833 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.10:01:37.963 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.10:01:45.818 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.10:02:02.708 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.10:03:27.368 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s264ms153µs).
+25-01-18.10:03:27.388 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.10:03:27.396 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-18.10:03:38.171 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 10860 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-18.10:03:38.172 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-18.10:03:40.125 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-18.10:03:40.342 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.535 seconds (JVM running for 3.198)
+25-01-18.10:03:40.515 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-18.10:03:40.722 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-18.10:03:40.758 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-18.10:03:40.758 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-18.10:03:40.845 [main            ] INFO  UserQuotaFilter        - ChatGPTAIServiceController updateCount:1
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-18.10:03:40.897 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-18.10:03:45.243 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (4345ms)
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Sat, 18 Jan 2025 02:03:45 GMT
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 2025011810034452047623418427708
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 182ea9f21966934f3add343ba3d9678a.cloudfront.net (CloudFront)
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: LAX50-P1
+25-01-18.10:03:45.244 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: CNl73PGBxCmDGc87avjXnhXsv0YdnM4QwS_U4HkJneFcQiKRlK4VPQ==
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-18.10:03:45.245 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-18.10:03:45.632 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-18.10:03:45.632 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"1"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"+"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"1"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":" equals"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":" "},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"."},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqsTZdVLPi6wGAoMOBjh4fw6ZdqKH","object":"chat.completion.chunk","created":1737165825,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"usage":null}
+
+data: [DONE]
+
+
+25-01-18.10:03:45.632 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (2484-byte body)
+25-01-18.10:07:27.544 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-18.10:07:27.547 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

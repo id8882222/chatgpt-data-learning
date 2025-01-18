@@ -1,10 +1,12 @@
 package com.hxy.chatgptdatatrigger.http;
 
 import com.alibaba.fastjson.JSON;
+import com.hxy.chatgptdatadomain.auth.service.IAuthService;
 import com.hxy.chatgptdatadomain.openai.model.aggregates.ChatProcessAggregate;
 import com.hxy.chatgptdatadomain.openai.model.entity.MessageEntity;
 import com.hxy.chatgptdatadomain.openai.service.IChatService;
 import com.hxy.chatgptdatatrigger.http.dto.ChatGPTRequestDTO;
+import com.hxy.chatgptdatatypes.common.Constants;
 import com.hxy.chatgptdatatypes.exception.ChatGPTException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.stream.Collectors;
 
 /**
@@ -21,11 +24,14 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController()
 @CrossOrigin("${app.config.cross-origin}")
-@RequestMapping("/api/${app.config.api-version}/")
+@RequestMapping("/api/${app.config.api-version}/chatgpt/")
 public class ChatGPTAIServiceController {
 
     @Resource
     private IChatService chatService;
+
+    @Resource
+    private IAuthService authService;
 
     @RequestMapping(value="chat/completions", method = RequestMethod.POST)
     public ResponseBodyEmitter completionsStream(@RequestBody ChatGPTRequestDTO request, @RequestHeader("Authorization") String token, HttpServletResponse response){
@@ -36,9 +42,25 @@ public class ChatGPTAIServiceController {
             response.setCharacterEncoding("UTF-8");
             response.setHeader("Cache-Control", "no-cache");
 
-            //2. 构建参数
+            //2. 构建异步响应对象【对 Token 过期拦截】
+            ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
+            boolean success = authService.checkToken(token);
+
+            if(!success){
+                try {
+                    emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
+                }catch (IOException e){
+                    throw new RuntimeException(e);
+                }
+                emitter.complete();
+                return emitter;
+            }
+            // 3. 获取 OpenID
+            String openid = authService.openid(token);
+
+            // 3.构建参数
             ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
-                    .token(token)
+                    .openid(openid)
                     .model(request.getModel())
                     .messages(request.getMessages().stream()
                             .map(entity -> MessageEntity.builder()
@@ -48,7 +70,7 @@ public class ChatGPTAIServiceController {
                                     .build())
                             .collect(Collectors.toList()))
                     .build();
-            ResponseBodyEmitter emitter = new ResponseBodyEmitter(5 * 60 * 1000L);
+
             // 3.请求结果&返回
             return chatService.completions(emitter, chatProcessAggregate);
         }catch (Exception e){

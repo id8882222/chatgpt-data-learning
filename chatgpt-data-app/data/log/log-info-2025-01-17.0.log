@@ -1,0 +1,786 @@
+25-01-17.15:50:16.694 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22504 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.15:50:16.695 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.15:50:18.534 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+25-01-17.15:50:18.541 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-01-17.15:50:18.557 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 87 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 100 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:406)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096$$FastClassBySpringCGLIB$$b685e547.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 101 common frames omitted
+25-01-17.15:50:18.561 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@4116aac9] to prepare test instance [com.hxy.chatgptdataapp.domain.openai.ChatServiceTest@5555ffcf]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IUserAccountDao' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-infrastructure\target\classes\com\hxy\chatgptdatainfrastructure\dao\IUserAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 87 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 100 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [mybatis/config/mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:406)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096$$FastClassBySpringCGLIB$$b685e547.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bcca3096.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 101 common frames omitted
+25-01-17.15:54:35.168 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 21252 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.15:54:35.169 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.15:54:37.151 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.15:54:37.364 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.527 seconds (JVM running for 3.198)
+25-01-17.15:54:37.593 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.15:54:37.876 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.15:54:37.926 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.15:54:37.927 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.15:57:01.294 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 18660 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.15:57:01.295 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.15:57:03.510 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.15:57:03.807 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.914 seconds (JVM running for 4.407)
+25-01-17.15:57:04.027 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.15:57:04.270 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.16:00:02.745 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m28s473ms536µs400ns).
+25-01-17.16:00:02.767 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.16:00:02.771 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.16:00:05.585 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 14912 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.16:00:05.587 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.16:00:08.141 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.16:00:08.421 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 3.281 seconds (JVM running for 4.089)
+25-01-17.16:00:09.270 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.16:00:29.645 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 20880 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.16:00:29.646 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.16:00:31.810 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.16:00:32.101 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.849 seconds (JVM running for 3.635)
+25-01-17.16:00:38.446 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.16:00:39.621 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.17:01:59.070 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h46s681ms663µs400ns).
+25-01-17.17:01:59.104 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.17:01:59.113 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.17:02:01.412 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22412 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:02:01.413 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:02:03.426 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.17:02:03.673 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.619 seconds (JVM running for 3.3)
+25-01-17.17:02:03.869 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.17:02:06.788 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 22044 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:02:06.789 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:02:08.955 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.17:02:09.245 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.836 seconds (JVM running for 3.635)
+25-01-17.17:02:14.700 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.17:02:15.934 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.17:02:34.017 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.17:02:34.030 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.17:02:36.578 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 9056 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:02:36.579 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:02:38.822 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.17:02:39.117 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.939 seconds (JVM running for 3.763)
+25-01-17.17:02:42.083 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.17:02:43.170 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.17:36:24.448 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m41s163ms794µs500ns).
+25-01-17.17:36:24.482 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.17:36:24.491 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.17:36:30.289 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 20584 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:36:30.290 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:36:32.127 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-01-17.17:36:32.134 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-01-17.17:36:32.160 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hxy.chatgptdatadomain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+
+25-01-17.17:36:32.163 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@60df60da] to prepare test instance [com.hxy.chatgptdataapp.domain.openai.ChatServiceTest@49c1e294]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 75 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 90 common frames omitted
+25-01-17.17:38:02.142 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 1528 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:38:02.143 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:38:03.868 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-01-17.17:38:03.876 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-01-17.17:38:03.894 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hxy.chatgptdatadomain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+
+25-01-17.17:38:03.897 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@60df60da] to prepare test instance [com.hxy.chatgptdataapp.domain.openai.ChatServiceTest@2d4a3e13]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [E:\git_repo\chatgpt-data-learning\chatgpt-data-domain\target\classes\com\hxy\chatgptdatadomain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 75 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 90 common frames omitted
+25-01-17.17:46:24.267 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 2540 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:46:24.268 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:46:26.450 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.17:46:26.736 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.867 seconds (JVM running for 3.644)
+25-01-17.17:46:53.336 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.17:46:53.570 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.17:46:53.675 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-17.17:46:53.675 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-17.17:46:53.675 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-17.17:46:53.675 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-17.17:46:53.676 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.17:46:53.676 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-17.17:46:53.676 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (3168ms)
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Fri, 17 Jan 2025 09:46:56 GMT
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 202501171746564318472785773185
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 2146d75cb402f16f98928cb19acf5ff6.cloudfront.net (CloudFront)
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: FRA56-P8
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: uJcvvhixOukq2xFn5WAv5aRRrv9NTqV6NtqEAknfQsMPv4mFTE-mAA==
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-17.17:46:56.845 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-17.17:46:56.851 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.17:46:56.851 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-AqdEG9EXGXtGQreEjPTeObyERTzI3","object":"chat.completion.chunk","created":1737107216,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqdEG9EXGXtGQreEjPTeObyERTzI3","object":"chat.completion.chunk","created":1737107216,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqdEG9EXGXtGQreEjPTeObyERTzI3","object":"chat.completion.chunk","created":1737107216,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"usage":null}
+
+data: [DONE]
+
+
+25-01-17.17:46:56.851 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (840-byte body)
+25-01-17.17:47:00.405 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.17:47:00.411 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.17:47:02.750 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 21812 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.17:47:02.751 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.17:47:04.745 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.17:47:04.977 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.587 seconds (JVM running for 3.306)
+25-01-17.17:47:05.166 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.17:47:05.381 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-17.17:47:05.468 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (2117ms)
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Fri, 17 Jan 2025 09:47:07 GMT
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 2025011717470714088517838231784
+25-01-17.17:47:07.586 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 83f37b03194be210134265ef78592588.cloudfront.net (CloudFront)
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: FRA56-P8
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: aadLDPVrh9tIgaXWgInWrh6n8KeDj-c2g6hQChJG95jyfutzkxY3ug==
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-17.17:47:07.587 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-17.17:47:07.588 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.17:47:07.588 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-AqdER2r9yU8vw3o9nYVJ16x9ASEBC","object":"chat.completion.chunk","created":1737107227,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqdER2r9yU8vw3o9nYVJ16x9ASEBC","object":"chat.completion.chunk","created":1737107227,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"chatcmpl-AqdER2r9yU8vw3o9nYVJ16x9ASEBC","object":"chat.completion.chunk","created":1737107227,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_0165350fbb","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"usage":null}
+
+data: [DONE]
+
+
+25-01-17.17:47:07.588 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (840-byte body)
+25-01-17.21:50:49.531 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.21:50:49.538 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.21:50:52.154 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 21604 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.21:50:52.155 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.21:50:54.134 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.21:50:54.353 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.545 seconds (JVM running for 3.206)
+25-01-17.21:50:54.533 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.21:50:54.751 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.21:50:54.787 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-17.21:50:54.787 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-17.21:50:54.840 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-17.21:50:54.840 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-17.21:50:54.840 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-17.21:50:54.840 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-17.21:50:54.840 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.21:50:54.841 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-17.21:50:54.841 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-17.21:51:07.273 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (12433ms)
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Fri, 17 Jan 2025 13:51:07 GMT
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 2025011721505830180760132257707
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 d34c1f3bde73ba74acaa2d8cb0ec40b2.cloudfront.net (CloudFront)
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: LAX50-P1
+25-01-17.21:51:07.274 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: tgi3ppv9YG4uAqjDqTmqJ7XcM9GtjS6C_OALvfCy4ixvylpMcp5etA==
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-17.21:51:07.275 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-17.21:51:08.313 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.21:51:08.313 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-Aqh2Zjz7WWqPkpFWBLP0uOxkA4wQp","object":"chat.completion.chunk","created":1737121867,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}]}
+
+data: {"id":"chatcmpl-Aqh2Zjz7WWqPkpFWBLP0uOxkA4wQp","object":"chat.completion.chunk","created":1737121867,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}]}
+
+data: {"id":"chatcmpl-Aqh2Zjz7WWqPkpFWBLP0uOxkA4wQp","object":"chat.completion.chunk","created":1737121867,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}]}
+
+data: [DONE]
+
+
+25-01-17.21:51:08.313 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (768-byte body)
+25-01-17.21:52:38.040 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-17.21:52:38.043 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-17.21:52:40.812 [main            ] INFO  ChatServiceTest        - Starting ChatServiceTest using Java 1.8.0_241 on DESKTOP-M4RBI0N with PID 20096 (started by pc in E:\git_repo\chatgpt-data-learning\chatgpt-data-app)
+25-01-17.21:52:40.813 [main            ] INFO  ChatServiceTest        - The following 1 profile is active: "dev"
+25-01-17.21:52:42.963 [main            ] INFO  WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+25-01-17.21:52:43.256 [main            ] INFO  ChatServiceTest        - Started ChatServiceTest in 2.853 seconds (JVM running for 3.638)
+25-01-17.21:52:49.729 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-17.21:52:50.870 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-17.21:53:01.280 [main            ] INFO  AbstractChatService    - userAccountQuotaEntity == null ? false
+25-01-17.21:53:17.927 [main            ] INFO  ChatService            - ChatService doCheckLogic logics
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-aws-api.zcyai.com/v1/chat/completions
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 149
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - apiKey: sk-SYVdsvPXaI6OUktu6e2bA87fD26348B5835f2aFc2374Cb17
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.21:53:52.823 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - {"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"1+1"}],"temperature":0.0,"stream":true,"frequency_penalty":0.0,"presence_penalty":0.0}
+25-01-17.21:53:52.824 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST (149-byte body)
+25-01-17.21:53:58.013 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- 200 OK https://pro-share-aws-api.zcyai.com/v1/chat/completions (5188ms)
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: text/event-stream
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Connection: keep-alive
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Cache-Control: no-cache
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Date: Fri, 17 Jan 2025 13:53:57 GMT
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Oneapi-Request-Id: 202501172153564330122568362211
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Cache: Miss from cloudfront
+25-01-17.21:53:58.014 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Via: 1.1 ab8cfade51df87f6bc68307386d89768.cloudfront.net (CloudFront)
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Pop: LAX50-P1
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Alt-Svc: h3=":443"; ma=86400
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Amz-Cf-Id: RoG4tW2jKWvZHuU75lWU4pPvjtT5zik5o2Kh1YQFNIZKaVJCBdRWmg==
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-XSS-Protection: 1; mode=block
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Frame-Options: SAMEORIGIN
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Referrer-Policy: strict-origin-when-cross-origin
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - X-Content-Type-Options: nosniff
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000
+25-01-17.21:53:58.015 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - Vary: Origin
+25-01-17.21:53:59.073 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - 
+25-01-17.21:53:59.074 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - data: {"id":"chatcmpl-Aqh5JgGWxhIHTyZTiSfMGctGA3hiv","object":"chat.completion.chunk","created":1737122037,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}]}
+
+data: {"id":"chatcmpl-Aqh5JgGWxhIHTyZTiSfMGctGA3hiv","object":"chat.completion.chunk","created":1737122037,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"2"},"logprobs":null,"finish_reason":null}]}
+
+data: {"id":"chatcmpl-Aqh5JgGWxhIHTyZTiSfMGctGA3hiv","object":"chat.completion.chunk","created":1737122037,"model":"gpt-3.5-turbo-0125","system_fingerprint":null,"choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}]}
+
+data: [DONE]
+
+
+25-01-17.21:53:59.074 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  OkHttpClient           - <-- END HTTP (768-byte body)

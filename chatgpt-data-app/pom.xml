@@ -33,6 +33,15 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxy</groupId>
+            <artifactId>chatgpt-sdk-java-learning</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.hxy</groupId>
             <artifactId>chatgpt-sdk-java-learning</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -47,6 +56,11 @@
             <groupId>com.hxy</groupId>
             <artifactId>chatgpt-data-infrastructure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
